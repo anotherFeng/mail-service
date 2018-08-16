@@ -3,5 +3,8 @@
   "private": true,
   "devDependencies": {
     "lerna": "^3.0.6"
-  }
+  },
+  "keywords": [],
+  "author": "Feng Chen",
+  "license": "ISC"
 }
