@@ -10,5 +10,5 @@ server.use("/graphql", graphqlExpress({ schema }));
 server.use("/graphiql", graphiqlExpress({ endpointURL: "/graphql"}));
 
 server.listen(port, () => {
-  console.log(`listening to ${port}`);
+  console.log(`listening to gateway at ${port}`);
 });
