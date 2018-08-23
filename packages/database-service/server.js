@@ -1,9 +1,12 @@
 const server = require("express")();
 const bodyParser = require("body-parser");
+const mongoose = require("mongoose");
 const { port } = require("./config");
-const routes = require('./routes/mail');
+const routes = require('./routes/mailRoutes');
 const config = require('./config');
-require('./dbUtil')(config);
+
+mongoose.Promise = global.Promise;
+mongoose.connect(config.mongoURI);
 
 server.use(bodyParser.json());
 server.use('/api/v1/database/', routes)
