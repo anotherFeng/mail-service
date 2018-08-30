@@ -1,7 +1,7 @@
 const axios = require('axios');
 
 const getMails = async () => {
-  const mails = (await axios.get('http://localhost:4001/mails')).data.payload;
+  const mails = (await axios.get('http://localhost:4001/api/v1/database/mails')).data.payload;
   return mails;
 }
 
