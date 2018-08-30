@@ -1,5 +1,7 @@
 packages/gateway/node_modules
 packages/gateway/.env
-packages/config/config.dev.js
-packages/config/config.prod.js
+packages/database-service/config/config.dev.js
+packages/database-service/config/config.prod.js
+packages/gateway/config/config.dev.js
+packages/gateway/config/config.prod.js
 node_modules
