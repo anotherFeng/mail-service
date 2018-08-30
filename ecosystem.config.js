@@ -9,8 +9,8 @@ module.exports = {
       script: `${basePath}/gateway/server.js`,
       watch: true,
       env: {
-        PORT: 3000,
-        SERICE_DB_PORT: 4001
+        PORT: 3001,
+        SERVICE_DB_PORT: 4001
       }
     },
 
@@ -19,7 +19,7 @@ module.exports = {
       script: `${basePath}/database-service/server.js`,
       watch: true,
       env: {
-        PORT: 3001
+        PORT: 4001
       }
     }
   ],
