@@ -10,6 +10,14 @@ const getMail = async (id) => {
   return mail;
 };
 
+const postSingleMail = async (body) => {
+  const postedMail = (await axios.post(
+    'http://localhost:4001/api/v1/database/mails',
+    {... body.input})
+  ).data.payload;
+  return postedMail
+};
+
 module.exports = {
   Query: {
     mails: () => getMails(),
@@ -17,9 +25,7 @@ module.exports = {
   },
   Mutation: {
     mail: (_, args) => {
-      dummyMails[0] = args;
-      console.log(args)
-      return args;
+      return postSingleMail(args);
     }
   }
 }
