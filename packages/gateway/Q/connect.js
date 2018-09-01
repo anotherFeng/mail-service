@@ -11,6 +11,13 @@ amqp.connect('amqp://kcrkzyfp:1rGGSYMQaS6blE9PiaksGK964CbblgLJ@chimpanzee.rmq.cl
       if(err) throw new Error(err);
      
       ch.assertQueue(q, { durable: true });
-      ch.sendToQueue(q, Buffer.from('Hello RabbitMQ'));
-    })
-  });
+      ch.sendToQueue(q, Buffer.from('Hello TEST Consumer'));
+    });
+
+    setTimeout(() => {
+      connection.close();
+
+      process.exit(0);
+    }, 1000)
+  }
+);
