@@ -1,7 +1,10 @@
-const { PORT, SERVICE_DB_PORT } = process.env;
+const { PORT, SERVICE_DB_PORT, Q_URI } = process.env;
 module.exports = {
-  port: process.env.PORT || 3001,
+  port: PORT || 3001,
   serviceDatabase: {
     port: SERVICE_DB_PORT || 4001
+  },
+  q: {
+    uri: Q_URI || 'test'
   }
-}
+};
