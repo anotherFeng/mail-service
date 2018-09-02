@@ -19,8 +19,8 @@ const pushToMessageQ = (msg) => {
   }
   channel.sendToQueue(q, Buffer.from(msg));
   return { m: 'done'};
-}
+};
 
 module.exports = {
-  fn: () => pushToQ()
-}
+  pushToMessageQ
+};
