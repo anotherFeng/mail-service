@@ -29,6 +29,8 @@ module.exports = {
       script: `${basePath}/mailing-service/index.js`,
       watch: true,
       env: {
+        MAILJET_API: '94499a50f9a95bb0d3fe4ae401dfac96',
+        MAILJET_API_SECRET: '69499817dddf5ebe6a4cf9e474b638ff',
         Q_URI: 'amqp://kcrkzyfp:1rGGSYMQaS6blE9PiaksGK964CbblgLJ@chimpanzee.rmq.cloudamqp.com/kcrkzyfp'
       }
     }
