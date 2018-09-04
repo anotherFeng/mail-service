@@ -10,7 +10,8 @@ module.exports = {
       watch: true,
       env: {
         PORT: 3001,
-        SERVICE_DB_PORT: 4001
+        SERVICE_DB_PORT: 4001,
+        Q_URI: 'amqp://kcrkzyfp:1rGGSYMQaS6blE9PiaksGK964CbblgLJ@chimpanzee.rmq.cloudamqp.com/kcrkzyfp'
       }
     },
 
@@ -21,17 +22,16 @@ module.exports = {
       env: {
         PORT: 4001
       }
+    },
+
+    {
+      name: 'Mailing Service',
+      script: `${basePath}/mailing-service/index.js`,
+      watch: true,
+      env: {
+        Q_URI: 'amqp://kcrkzyfp:1rGGSYMQaS6blE9PiaksGK964CbblgLJ@chimpanzee.rmq.cloudamqp.com/kcrkzyfp'
+      }
     }
   ],
-
-  // deploy : {
-  //   production : {
-  //     user : 'node',
-  //     host : '212.83.163.1',
-  //     ref  : 'origin/master',
-  //     repo : 'git@github.com:repo.git',
-  //     path : '/var/www/production',
-  //     'post-deploy' : 'npm install && pm2 reload ecosystem.config.js --env production'
-  //   }
-  // }
+  
 };
