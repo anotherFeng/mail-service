@@ -1,4 +1,4 @@
-const { mail: { apiPublic, apiSecret }} = require('../config');
+const { mailjet: { apiPublic, apiSecret }} = require('../config');
 const Mailjet = require('node-mailjet').connect(apiPublic, apiSecret);
 
 console.log(Mailjet);

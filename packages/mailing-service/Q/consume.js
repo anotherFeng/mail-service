@@ -1,5 +1,6 @@
 const amqp = require('amqplib/callback_api');
 const { q: { uri }} = require('../config/config.dev');
+const sendMail = require('../handler/sendMail');
 
 module.exports = () => {
   const q = 'test_q';
@@ -19,6 +20,7 @@ module.exports = () => {
         }
         
         console.log('Mail Received', mail);
+        sendMail(mail);
       }, { noAck: true });
     });
   });
