@@ -4,4 +4,5 @@ packages/database-service/config/config.dev.js
 packages/database-service/config/config.prod.js
 packages/gateway/config/config.dev.js
 packages/gateway/config/config.prod.js
+ecosystem.config.js
 node_modules
